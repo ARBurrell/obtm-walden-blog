@@ -15,7 +15,7 @@ FTP_TARGET_DIR=/
 SSH_HOST=bigv
 SSH_PORT=22022
 SSH_USER=cedeon
-SSH_TARGET_DIR=/home/cedeon/weblog
+SSH_TARGET_DIR=/var/www/weblog
 
 S3_BUCKET=my_s3_bucket
 
