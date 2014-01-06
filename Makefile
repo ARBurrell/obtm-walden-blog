@@ -13,7 +13,7 @@ FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
 SSH_HOST=bigv
-SSH_PORT=22
+SSH_PORT=22022
 SSH_USER=cedeon
 SSH_TARGET_DIR=/home/cedeon/git/obtm-blog
 
