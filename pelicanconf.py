@@ -38,7 +38,7 @@ DEFAULT_PAGINATION = 10
 
 THEME = 'svbtle_cedeon'
 
-
+# Note.. plugin path is in a fragile state on live server
 PLUGIN_PATH = '/home/cedeon/venv/pelican-env/pelican-plugins'
 PLUGINS = ['assets', 'sitemap', 'gravatar', 'gzip_cache' ]
 
