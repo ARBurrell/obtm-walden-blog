@@ -22,17 +22,20 @@
 	{% endblock head %}
 </head>
 <body>
-	<h1>{{ TAGLINE }}</h1>
-	<h2>{{ TAGLINE }}</h2>
 
 	<section id="sidebar" {% if article and article.TODOFixMe %}style="background: #333 ('/static/img/{{ article.TODOFixMe }}') norepeat left top;"{% endif %}>
 		<figure id="user_logo">
-            <a href="{{ SITEURL }}">
+            <a href="{{ SITEURL }}/">
             	<div class="logo">
             		<img id="logo" src="{{ SITEURL }}/static/img/logo-obtm.png" class="" />
             	</div>
         	</a>
 		</figure>
+
+		{% if SITE_PHONE %}
+			<p class="phone">{{ SITE_PHONE }}</p>
+		{% endif %}
+
 
 		<div class="user_meta">
 
@@ -57,6 +60,13 @@
 				{% endfor %}
 			</ul>
 		</div>
+
+		<div class="social">
+			{% if GPLUS_PAGE %}<a class="gplus" href="{{ GPLUS_PAGE }}" rel="me">&nbsp;</a>{% endif %}
+			{% if FACEBOOK_PAGE %}<a class="facebook" href="{{ FACEBOOK_PAGE }}" rel="me">&nbsp;</a>{% endif %}
+			{% if TWITTER_PAGE %}<a class="twitter" href="{{ TWITTER_PAGE }}" rel="me">&nbsp;</a>{% endif %}
+		</div>
+
 		<footer>
 			<address>
 				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,

@@ -5,8 +5,13 @@
 @med-grey:		#999999;
 @dark-grey:		#4d4d4d;
 @blue:			#0e94ec;
-@nav-link:		rgb(118, 104, 104);
-@nav-bkgd:      rgba(51, 51, 51, 0.09);
+@nav-link:		white;
+@nav-bkgd:      #222;
+@nav-border:    #9D6F6F;
+@header-bkgd:   #222;
+@header-tit:	white;
+@header-subtit: grey;
+@header-third:  blue;
 
 @accent:			@blue;
 
@@ -84,6 +89,37 @@ a {
 	word-wrap: break-word;
 }
 
+.phone {
+	font-size: 12pt;
+	text-align: center;
+}
+
+.social {
+	display: inline-block;
+	margin: 20px 40px 0px;
+
+	a {
+		display: inline-block;
+		width: 58px;
+		height: 64px;
+		background: transparent url('/static/img/social.png') no-repeat scroll;
+	}
+	a.gplus {
+		background-position: -5px 0px;
+	}
+	a.facebook {
+		background-position: -63px 0px;
+		width: 54px;
+	}
+	a.twitter {
+		background-position: -116px 0px;
+	}
+}
+
+.headerimg {
+    height: 125px;
+}
+
 section#sidebar {
 	width: 258px;
 	position: fixed;
@@ -142,15 +178,18 @@ section#sidebar {
 		float: none;
 
 		a {
-			color: @nav-link;
-			font-size: 12px;
-			line-height: 12px;
-			border: 2px solid @light-grey;
-			.border-radius(2px);
 			background-color: @nav-bkgd;
-			padding: 3px 0px;
-			display: inline-block;
-			width: 178px;
+		    border: 2px solid @nav-border;
+		    border-radius: 6px;
+		    color: @nav-link;
+		    display: inline-block;
+		    font-size: 12px;
+		    font-weight: 600;
+		    line-height: 20px;
+		    padding: 2px 0;
+		    text-align: center;
+		    text-transform: uppercase;
+		    width: 178px;
 		}
 	}
 
@@ -182,7 +221,7 @@ section#posts {
 	z-index: 1;
 
 	h1 {
-		margin: 24px 0 16px;
+		margin: 8px 0 18px;
 		color: @black;
 		font-size: 24px;
 		line-height: 32px;
@@ -278,26 +317,23 @@ section#posts {
 	}
 
 	header {
+		background-color: @header-bkgd;
 		margin: 0;
-		padding: 40px 40px 40px 50px;
+		padding: 2px 46px;
 		border-bottom: @light-grey 1px solid;
-		font-color: @black;
+		font-color: @header-tit;
 		font-weight: 300;
 		text-transform: uppercase;
 		text-size: 15px;
-		line-height: 33px;
 
 		h1 {
-			margin: 0;
-			padding: 0;
-			height: 0;
-			width: 0;
-			visibility: hidden;
+			color: @header-tit;
+			line-height: 22px;
+    		margin: 8px 0 0;
 		}
 		h3 {
-			margin: 0;
-			padding: 0;
-			color: @black;
+			color: @header-subtit;
+			margin: -8px 0px 0px;
 		}
 	}
 
@@ -352,13 +388,13 @@ section#posts {
 
 	article {
 		margin: 0;
-		padding: 40px 40px 40px 50px;
+		padding: 0px 40px 40px 50px;
 		position: relative;
 		font-size: 15px;
 		line-height: 25px;
 		overflow-x: hidden;
 		overflow-y: hidden;
-		width: 620px;
+		/* width: 620px; */
 
 		#title{
 			font-family: 'Freight-Sans-Pro', 'Proxima Nova', 'Open Sans', 'Lato', sans-serif;
@@ -375,6 +411,11 @@ section#posts {
 			padding: 0;
 			font-size: 13px;
 			line-height: 16px;
+		}
+
+		img {
+			max-width:800px;
+			display: block;
 		}
 	}
 

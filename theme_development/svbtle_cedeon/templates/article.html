@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 	{% include "header.html" %}
+	{% if article.headerimg and article.headercol  %}
+	<div class="headerimg" style="background: url('{{article.headerimg}}') no-repeat scroll 50px 0 {{article.headercol}};">&nbsp;</div>
+	{% endif %}
 	<article>
 		<h1 id="title">
 			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
@@ -23,7 +26,7 @@
 	</article>
 
 	<footer>
-		<a href="{{ SITEURL }}/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+		<a href="{{ SITEURL }}/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back</a>
 	</footer>
 
 	{% if DISQUS_SITENAME %}
