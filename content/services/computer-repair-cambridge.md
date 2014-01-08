@@ -5,6 +5,7 @@ Tags: computer-repair, laptop-repair
 Slug: computer-repair-services-cambridge
 Author: William Culver
 Summary: We offer a variety of computer, laptop and smartphone repair services in the Cambridgeshire area.
+Thumb: /static/img/thumbnails/repair.jpg
 Headerimg: /static/img/headers/repair.jpg
 Headercol: #3A3A3A
 

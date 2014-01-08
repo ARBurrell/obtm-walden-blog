@@ -135,6 +135,13 @@ a {
     height: 125px;
 }
 
+.thumb {
+	float: left;
+	width: 237px;
+	height: 100px;
+	margin-right: 20px;
+}
+
 section#sidebar {
 	background: white;
 	width: 258px;
@@ -302,9 +309,6 @@ section#posts {
 		border-left: 10px solid @accent;
 		font-style: italic;
 		max-width: 660px;
-		p {
-			width: 660px;
-		}
 	}
 
 	code {
@@ -493,12 +497,12 @@ section#posts {
 
 			li {
 				margin: 0 0 0px;
-				padding: 0 0 50px 50px;
+				padding: 0 50px 50px 50px;
 				border-bottom: @light-grey 1px solid;
 			}
 
 			.title {
-				margin: 76px 0 0;
+				margin: 40px 0 0;
 				padding: 0;
 				color: @black;
 				a {
@@ -507,7 +511,6 @@ section#posts {
 			}
 
 			.entry-content {
-				width: 550px;
 
 				ul {
 					margin: 0 0 0 15px;
@@ -529,7 +532,7 @@ section#posts {
 				font-weight: 300px;
 				font-size: 13px;
 				line-height: 16px;
-				visibility: hidden;
+				/*visibility: hidden;*/
 			}
 		}
 	}

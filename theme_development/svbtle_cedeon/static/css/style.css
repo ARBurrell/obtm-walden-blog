@@ -82,6 +82,12 @@ a:focus {
 .headerimg {
   height: 125px;
 }
+.thumb {
+  float: left;
+  width: 237px;
+  height: 100px;
+  margin-right: 20px;
+}
 section#sidebar {
   background: white;
   width: 258px;
@@ -228,9 +234,6 @@ section#posts blockquote {
   border-left: 10px solid #0e94ec;
   font-style: italic;
   max-width: 660px;
-}
-section#posts blockquote p {
-  width: 660px;
 }
 section#posts code {
   margin: 0;
@@ -401,19 +404,16 @@ section#posts dl ol {
 }
 section#posts dl ol li {
   margin: 0 0 0px;
-  padding: 0 0 50px 50px;
+  padding: 0 50px 50px 50px;
   border-bottom: #eeeeee 1px solid;
 }
 section#posts dl ol .title {
-  margin: 76px 0 0;
+  margin: 40px 0 0;
   padding: 0;
   color: #000000;
 }
 section#posts dl ol .title a {
   border: none;
-}
-section#posts dl ol .entry-content {
-  width: 550px;
 }
 section#posts dl ol .entry-content ul {
   margin: 0 0 0 15px;
@@ -432,5 +432,5 @@ section#posts dl ol abbr {
   font-weight: 300px;
   font-size: 13px;
   line-height: 16px;
-  visibility: hidden;
+  /*visibility: hidden;*/
 }

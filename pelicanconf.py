@@ -35,16 +35,15 @@ LINKS =  (('Computer Repair', '/computer-repair-services-cambridge.html'),
           ('Blog', '/category/blog.html'),)
 
 # Social widget
+SOCIAL = (('github', 'http://github.com/cedeon'),)
 DISQUS_SITENAME = 'onebytetoomany'
-PDF_GENERATOR = False
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
-
 GPLUS_PAGE = 'https://www.google.com/+OneByteTooManyBurwell'
 FACEBOOK_PAGE = 'https://www.facebook.com/OneByteTooMany'
 TWITTER_PAGE = 'https://twitter.com/cedeon/'
-
 TWITTER_USERNAME = 'cedeon'
+PDF_GENERATOR = False
+
+GOOGLE_ANALYTICS = 'UA-24085046-3'
 
 DEFAULT_PAGINATION = 10
 
@@ -74,9 +73,9 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 SITEMAP = {
     'format': 'xml',
     'priorities': {
-        'articles': 0.5,
+        'articles': 0.7,
         'indexes': 0.5,
-        'pages': 0.5
+        'pages': 0.6
     },
     'changefreqs': {
         'articles': 'monthly',

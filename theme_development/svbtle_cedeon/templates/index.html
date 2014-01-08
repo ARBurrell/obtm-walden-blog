@@ -6,6 +6,9 @@
 		<ol>
 			{% for article in articles_page.object_list %}
 				<li>
+					{% if article.thumb %}
+					<img class="thumb" src="{{ article.thumb }}" />
+					{% endif %}
 					<h1 class="title">
 						<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a>
 					</h1>
