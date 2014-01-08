@@ -17,69 +17,70 @@
 	{% endif %}
 
 	{% block head %}
-		<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+		<title>{% block title %}{{ SITE_FULL_TITLE }}{% endblock title %}</title>
 		<meta charset="utf-8" />
 	{% endblock head %}
 </head>
 <body>
+	<div class="page">
+		<section id="sidebar" {% if article and article.TODOFixMe %}style="background: #333 ('/static/img/{{ article.TODOFixMe }}') norepeat left top;"{% endif %}>
+			<figure id="user_logo">
+	            <a href="{{ SITEURL }}/">
+	            	<div class="logo">
+	            		<img id="logo" src="{{ SITEURL }}/static/img/logo-obtm.png" class="" />
+	            	</div>
+	        	</a>
+			</figure>
 
-	<section id="sidebar" {% if article and article.TODOFixMe %}style="background: #333 ('/static/img/{{ article.TODOFixMe }}') norepeat left top;"{% endif %}>
-		<figure id="user_logo">
-            <a href="{{ SITEURL }}/">
-            	<div class="logo">
-            		<img id="logo" src="{{ SITEURL }}/static/img/logo-obtm.png" class="" />
-            	</div>
-        	</a>
-		</figure>
-
-		{% if SITE_PHONE %}
-			<p class="phone">{{ SITE_PHONE }}</p>
-		{% endif %}
-
-
-		<div class="user_meta">
-
-			{% if AUTHOR_BIO %}
-			<p class="bio">{{ AUTHOR_BIO }}</p>
+			{% if SITE_PHONE %}
+				<p class="phone">{{ SITE_PHONE }}</p>
 			{% endif %}
-			<ul>
-				{% for title, link in MENUITEMS %}
-					<li><a href="{{ link }}">{{ title }}</a></li>
-				{% endfor %}
-				{% if DISPLAY_PAGES_ON_MENU %}
-					{% for p in PAGES %}
-						<li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-					{% endfor %}
-				{% else %}
-					{% for cat, null in categories %}
-						<li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-					{% endfor %}
+
+
+			<div class="user_meta">
+
+				{% if AUTHOR_BIO %}
+				<p class="bio">{{ AUTHOR_BIO }}</p>
 				{% endif %}
-				{% for name, link in LINKS %}
-					<li><a href="{{ link }}">{{ name }}</a></li>
-				{% endfor %}
-			</ul>
-		</div>
+				<ul>
+					{% for title, link in MENUITEMS %}
+						<li><a href="{{ link }}">{{ title }}</a></li>
+					{% endfor %}
+					{% if DISPLAY_PAGES_ON_MENU %}
+						{% for p in PAGES %}
+							<li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+						{% endfor %}
+					{% else %}
+						{% for cat, null in categories %}
+							<li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+						{% endfor %}
+					{% endif %}
+					{% for name, link in LINKS %}
+						<li><a href="{{ link }}">{{ name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
 
-		<div class="social">
-			{% if GPLUS_PAGE %}<a class="gplus" href="{{ GPLUS_PAGE }}" rel="me">&nbsp;</a>{% endif %}
-			{% if FACEBOOK_PAGE %}<a class="facebook" href="{{ FACEBOOK_PAGE }}" rel="me">&nbsp;</a>{% endif %}
-			{% if TWITTER_PAGE %}<a class="twitter" href="{{ TWITTER_PAGE }}" rel="me">&nbsp;</a>{% endif %}
-		</div>
+			<div class="social">
+				{% if GPLUS_PAGE %}<a class="gplus" href="{{ GPLUS_PAGE }}" rel="me">&nbsp;</a>{% endif %}
+				{% if FACEBOOK_PAGE %}<a class="facebook" href="{{ FACEBOOK_PAGE }}" rel="me">&nbsp;</a>{% endif %}
+				{% if TWITTER_PAGE %}<a class="twitter" href="{{ TWITTER_PAGE }}" rel="me">&nbsp;</a>{% endif %}
+			</div>
 
-		<footer>
-			<address>
-				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
-		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
-			</address>
-		</footer>
-	</section>
+			<footer>
+				<address>
+					Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+			                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+				</address>
+			</footer>
+		</section>
 
-	<section id="posts">
-	{% block content %}
-	{% endblock %}
-	</section>
+		<section id="posts">
+		{% block content %}
+		{% endblock %}
+		</section>
 
-	{% include 'analytics.html' %}
+		{% include 'analytics.html' %}
+	</div>
 </body>
 </html>

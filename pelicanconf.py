@@ -6,7 +6,11 @@ AUTHOR = 'William Culver'
 AUTHOR_EMAIL = 'wculver@cedeon.co.uk'
 
 SITENAME = 'One Byte Too Many'
-SITESUBTITLE = 'Linux Specialists, Cambridge UK'
+SITE_TITLE = 'Linux Specialists'
+SITE_TITLE_APPEND = 'Cambridge, UK'
+SITESUBTITLE = SITE_TITLE + ' - ' + SITE_TITLE_APPEND
+SITE_FULL_TITLE = SITENAME + ' | ' + SITESUBTITLE
+
 SITE_PHONE = '01638 745147'
 #SITEURL = 'https://blog.onebytetoomany.co.uk'
 

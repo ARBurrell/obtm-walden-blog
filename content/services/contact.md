@@ -1,5 +1,6 @@
 Title: Contact Details
 Date: 2014-01-07 10:20
+Category: services
 Tags: contact information
 Slug: contact
 Author: William Culver

@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+{% block title %}
+	{% if article.title %}
+		{{ article.title }}
+	{% else %}
+		{{ SITE_FULL_TITLE }}
+	{% endif %}
+{% endblock %}
 {% block content %}
 	{% include "header.html" %}
 	{% if article.headerimg and article.headercol  %}

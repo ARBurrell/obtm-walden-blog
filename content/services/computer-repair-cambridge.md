@@ -1,5 +1,6 @@
 Title: Computer Repair Services in Cambridge, UK
 Date: 2014-01-07 10:20
+Category: services
 Tags: computer-repair, laptop-repair
 Slug: computer-repair-services-cambridge
 Author: William Culver
