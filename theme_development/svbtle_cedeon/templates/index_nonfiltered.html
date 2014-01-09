@@ -5,7 +5,6 @@
 	<dl>
 		<ol>
 			{% for article in articles_page.object_list %}
-			{% if article.category == 'services' %}
 				<li>
 					{% if article.thumb %}
 					<img class="thumb" src="{{ article.thumb }}" />
@@ -16,7 +15,6 @@
 					<abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
 				<div class="entry-content"> {{ article.summary }} </div>
 				</li>
-			{% endif %}
 			{% endfor %}
 		</ol>
 	</dl>
