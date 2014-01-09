@@ -5,8 +5,9 @@ Tags: linux, software-migration, os-migration, linux consultancy
 Slug: linux-migration-services-cambridge
 Author: William Culver
 Summary: We offer full consultancy services, operating system migration assistance and general Linux advice.
-Headerimg: /static/img/headers/development.jpg
-Headercol: #3A3A3A
+Thumb: /static/img/thumbnails/linux_migration.jpg
+Headerimg: /static/img/headers/linux_migration.jpg
+Headercol: #301C3D
 
 > Aside from the obvious cost benefits of using free software, migrating to Linux can free you in many other ways. Assisting free software migration is a personal mission here at OBTM and all systems in our office run GNU/Linux based systems with proprietary operating systems virtualized.  We love this setup and want to spread it throughout the world.  Windows XP is so 2003!
 

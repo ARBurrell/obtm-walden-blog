@@ -5,6 +5,7 @@ Tags: network, wireless, wifi
 Slug: network-and-wifi-installation-cambridge
 Author: William Culver
 Summary: Taking the hassle out of computer networking.
+Thumb: /static/img/thumbnails/installation_network.jpg
 Headerimg: /static/img/headers/installation_network.jpg
 Headercol: #283D44
 
