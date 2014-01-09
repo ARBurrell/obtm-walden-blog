@@ -14,7 +14,3 @@ Summary: Contact Page.
 - email: research at onebytetoomany.co.uk
 
 ------------------
-
-## Wi-Fi
-
-We can build and extend wireless networks as well as diagnose and repair problems. We can check that your wireless network is secure by penetration testing. Whatever your needs are, I'm sure we can help.
