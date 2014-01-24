@@ -1,5 +1,5 @@
 Title: Business Card Ideas
-Date: 2014-24-01 14:57
+Date: 2014-01-24 14:57
 Category: blog
 Tags: marketing
 Slug: business-card-ideas
