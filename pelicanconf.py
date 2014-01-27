@@ -4,23 +4,23 @@ from __future__ import unicode_literals
 
 AUTHOR = 'William Culver'
 AUTHOR_EMAIL = 'wculver@cedeon.co.uk'
-
 SITENAME = 'One Byte Too Many'
+SITEURL = 'https://www.onebytetoomany.co.uk'
+
 SITE_TITLE = 'Linux Specialists'
 SITE_TITLE_APPEND = 'Cambridge, UK'
 SITESUBTITLE = SITE_TITLE + ' - ' + SITE_TITLE_APPEND
 SITE_FULL_TITLE = SITENAME + ' | ' + SITESUBTITLE
-
 SITE_PHONE = '01638 745147'
-#SITEURL = 'https://blog.onebytetoomany.co.uk'
 
 TIMEZONE = 'Europe/London'
-
 DEFAULT_LANG = 'en'
 
 # Categories
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_CATEGORY = 'Blog'
+
+RELATIVE_URLS = False
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -46,9 +46,6 @@ PDF_GENERATOR = False
 GOOGLE_ANALYTICS = 'UA-24085046-3'
 
 DEFAULT_PAGINATION = 10
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
 
 THEME = 'svbtle_cedeon'
 
