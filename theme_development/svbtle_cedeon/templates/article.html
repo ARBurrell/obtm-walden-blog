@@ -12,10 +12,10 @@
 	<div class="headerimg" style="background: url('{{article.headerimg}}') no-repeat scroll 50px 0 {{article.headercol}};">&nbsp;</div>
 	{% endif %}
 	<article>
-		<h1 id="title">
+		<h2 id="title">
 			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
 				title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-		</h1>
+		</h2>
 		{{ article.content }}
 
 		<div id="article_meta">

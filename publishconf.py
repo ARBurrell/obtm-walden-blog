@@ -2,23 +2,81 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-# This file is only used if you use `make publish` or
-# explicitly specify it as your config file.
+AUTHOR = 'William Culver'
+AUTHOR_EMAIL = 'wculver@cedeon.co.uk'
+SITENAME = 'One Byte Too Many'
+SITEURL = 'https://www.onebytetoomany.co.uk'
 
-import os
-import sys
-sys.path.append(os.curdir)
-from pelicanconf import *
+SITE_TITLE = 'Linux Specialists'
+SITE_TITLE_APPEND = 'Cambridge, UK'
+SITESUBTITLE = SITE_TITLE + ' - ' + SITE_TITLE_APPEND
+SITE_FULL_TITLE = SITENAME + ' | ' + SITESUBTITLE
+SITE_PHONE = '01638 745147'
 
-SITEURL = ''
+TIMEZONE = 'Europe/London'
+DEFAULT_LANG = 'en'
+
+# Categories
+USE_FOLDER_AS_CATEGORY = True
+DEFAULT_CATEGORY = 'Blog'
+
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
 
-DELETE_OUTPUT_DIRECTORY = True
+# Blogroll
+LINKS =  (('Computer Repair', '/computer-repair-services-cambridge.html'),
+          ('Network Installation', '/network-and-wifi-installation-cambridge.html'),
+          ('Linux Migration', '/linux-migration-services-cambridge.html'),
+          ('Security Research', '/category/security.html'),
+          ('Blog', '/category/blog.html'),)
 
-# Following items are often useful when publishing
+# Social widget
+SOCIAL = (('github', 'http://github.com/cedeon'),)
+DISQUS_SITENAME = 'onebytetoomany'
+GPLUS_PAGE = 'https://www.google.com/+OneByteTooManyBurwell'
+FACEBOOK_PAGE = 'https://www.facebook.com/OneByteTooMany'
+TWITTER_PAGE = 'https://twitter.com/cedeon/'
+TWITTER_USERNAME = 'cedeon'
+PDF_GENERATOR = False
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = 'UA-24085046-3'
+
+DEFAULT_PAGINATION = 10
+
+THEME = 'svbtle_cedeon'
+
+# Note.. plugin path is in a fragile state on live server
+PLUGIN_PATH = '/home/cedeon/venv/pelican-env/pelican-plugins'
+PLUGINS = ['assets', 'sitemap', 'gravatar', 'gzip_cache' ]
+
+# path-specific metadata
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+}
+
+# static paths will be copied without parsing their contents
+STATIC_PATHS = [
+    'static',
+    'extra/robots.txt',
+]
+
+# code blocks with line numbers
+PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.7,
+        'indexes': 0.5,
+        'pages': 0.6
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
